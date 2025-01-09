@@ -38,72 +38,63 @@ This tutorial outlines the implementation of on-premises Active Directory within
 1. **Create a Resource Group**:
    - Navigate to the Azure Portal and create a new Resource Group for the lab environment.
 
-<p>
-<img src="https://i.imgur.com/X9D7oZr.png" height="80%" width="80%" alt="Lab 5"/>
-</p>
+![image](https://github.com/user-attachments/assets/983af9d6-d1da-44f8-95ed-937dde319add)
+
+![image](https://github.com/user-attachments/assets/498067d5-52e4-4cd3-a6b8-71c27f97b4d5)
 
 2. **Create a Virtual Network and Subnet**:
    - Set up a Virtual Network with a subnet to host your VMs.
 
-<p>
-<img src="https://i.imgur.com/sGOsLDu.png" height="80%" width="80%" alt="Lab 5"/>
-</p>
+![image](https://github.com/user-attachments/assets/f7078c3e-eef6-4365-84d5-85abffb94de3)
+
+![image](https://github.com/user-attachments/assets/79c0c20a-8035-4cc8-9312-3d56910b33ba)
 
 3. **Create the Domain Controller VM (Windows Server 2022)**:
    - Name the VM: `DC-1`.
    - Ensure that the VM is on the Virtual Network created previously.
 
-<p>
-<img src="https://i.imgur.com/GSFyfLy.png" height="80%" width="80%" alt="Lab 5"/>
-</p>
+![image](https://github.com/user-attachments/assets/5d48c445-14bc-4873-b569-3f91ef15de0b)
 
-<p>
-<img src="https://i.imgur.com/VbGeD0p.png" height="80%" width="80%" alt="Lab 5"/>
-</p>
+![image](https://github.com/user-attachments/assets/edcc433e-36e1-426e-a8ad-373f813e7cab)
 
-<p>
-<img src="https://i.imgur.com/J3RywPG.png" height="80%" width="80%" alt="Lab 5"/>
-</p>
+![image](https://github.com/user-attachments/assets/abaabcdc-617c-469e-b44b-dcfbc03f7156)
+
 
 4. **Set Static Private IP for DC-1**:
    - After the VM is created, navigate to its Network Interface Card (NIC) settings and set the private IP to static.
+- **Navigate to the Virtual Machines window and select the DC-1 VM**
+![image](https://github.com/user-attachments/assets/c730afd9-a961-491d-9655-f7e16e06fb54)
 
-<p>
-<img src="https://i.imgur.com/cTMJmBT.png" height="80%" width="80%" alt="Lab 5"/>
-</p>
+- **Navigate to the Network Setting to access the Network Interface Card**
+![image](https://github.com/user-attachments/assets/e5413596-98fe-4b9e-9c6b-4ef6cdcdaf31)
+
+- **Set the Allocation to Static underneath the Private IP Address Settings**
+![image](https://github.com/user-attachments/assets/25a0214e-4709-42a1-a171-471eef6286e8)
 
 5. **Disable Windows Firewall**:
    - Log in to `DC-1` and disable the Windows Firewall for testing connectivity.
 
-<p>
-<img src="https://i.imgur.com/M1pdqIC.png" height="80%" width="80%" alt="Lab 5"/>
-</p>
+![image](https://github.com/user-attachments/assets/ca0ea3fc-5f81-4021-be1f-4f8f6fd59d25)
+
+![image](https://github.com/user-attachments/assets/50af1532-5ce4-4802-b0b8-69f8a58d9b7e)
 
 #### **Setup Client-1 in Azure**
 1. **Create the Client VM (Windows 10 22H2)**:
    - Name the VM: `Client-1`.
 
-<p>
-<img src="https://i.imgur.com/IKjFWLi.png" height="80%" width="80%" alt="Lab 5"/>
-</p>
+![image](https://github.com/user-attachments/assets/0073efc2-8f0a-4a51-9eb8-28b80b02ef5b)
 
-<p>
-<img src="https://i.imgur.com/GDUymUz.png" height="80%" width="80%" alt="Lab 5"/>
-</p>
+![image](https://github.com/user-attachments/assets/8296f67d-6e67-43e8-89d5-680565c29811)
 
 2. **Attach Client-1 to the Same Region and Virtual Network**:
    - Ensure it is in the same Virtual Network and subnet as `DC-1`.
 
-<p>
-<img src="https://i.imgur.com/xEHpjqi.png" height="80%" width="80%" alt="Lab 5"/>
-</p>
+![image](https://github.com/user-attachments/assets/8f031e3c-5ea7-49e8-bc5f-401d72464642)
 
 3. **Set DNS Settings**:
-   - Update `Client-1`'s DNS settings to point to `DC-1`'s private IP address.
+   - Update `Client-1`'s DNS settings to point to `DC-1`'s private IP address. (navigate to the vm's network interface card)
 
-<p>
-<img src="https://i.imgur.com/umMQf3L.png" height="80%" width="80%" alt="Lab 5"/>
-</p>
+![image](https://github.com/user-attachments/assets/2529f31c-52e8-42e7-96cb-24db754a3a17)
 
 4. **Test Connectivity**:
    - Restart `Client-1` from the Azure Portal.

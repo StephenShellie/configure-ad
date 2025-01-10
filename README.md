@@ -206,10 +206,13 @@ This tutorial outlines the implementation of on-premises Active Directory within
 **Create a new file**
 ![image](https://github.com/user-attachments/assets/b7836c22-49a0-4bb7-9437-330b497c57d4)
 
+**Copy/Paste scripts & run it**
 ![image](https://github.com/user-attachments/assets/40458e9b-fdf1-4d0b-b402-053268ffaaac)
 
+**Verify users**
 ![image](https://github.com/user-attachments/assets/a85410d6-128e-4594-bb8a-76eb739f5911)
 
+**Log into Client 1 using one of the created accounts**
 ![image](https://github.com/user-attachments/assets/e46183bc-4bbe-4f5b-ba4a-6b8c667caa1d)
 
 ![image](https://github.com/user-attachments/assets/89715764-a310-410a-83d3-203b356a18dc)

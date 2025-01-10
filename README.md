@@ -103,9 +103,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 5. **Verify DNS Settings**:
    - Run `ipconfig /all` in PowerShell on `Client-1` to ensure the DNS points to `DC-1`.
 
-<p>
-<img src="https://i.imgur.com/RerVndW.png" height="80%" width="80%" alt="Lab 5"/>
-</p>
+![image](https://github.com/user-attachments/assets/14f9fa11-d976-491c-9b0b-94a611871eb1)
 
 ---
 
@@ -116,14 +114,29 @@ This tutorial outlines the implementation of on-premises Active Directory within
 2. Install Active Directory Domain Services (AD DS).
 3. Promote `DC-1` as a Domain Controller and set up a new forest (e.g., `mydomain.com`).
 4. Restart `DC-1` and log in as `mydomain.com\labuser`.
+ 
+ **Open Server Manager then add roles and features** 
+![image](https://github.com/user-attachments/assets/e50809fe-5013-4863-bc93-accd49c2f3d7)
 
-<p>
-<img src="https://i.imgur.com/xlMwDNZ.png" height="80%" width="80%" alt="Lab 5"/>
-</p>
+**Add the features from the Active Directory Domain Services**
+![image](https://github.com/user-attachments/assets/1a8ae232-4388-4e5c-8328-a10e21b1ca1e)
 
-<p>
-<img src="https://i.imgur.com/TRXeQJq.png" height="80%" width="80%" alt="Lab 5"/>
-</p>
+**Open the noticiation window and select "promote this server to a domain controller"**
+![image](https://github.com/user-attachments/assets/ce7ab7dc-4a19-49a6-8f71-714efd22f4c9)
+
+**Add mydomain.com as a new forest**
+![image](https://github.com/user-attachments/assets/7e03dd2f-6633-4945-b12b-fc297a6359b4)
+
+**Deselect "Create DNS delegation**
+![image](https://github.com/user-attachments/assets/b7ce680a-dfb0-4c8e-be5e-0e64b85ab119)
+
+**Finish the setup wizard and install**
+![image](https://github.com/user-attachments/assets/f326b790-90b8-4cd6-9ad3-94211488806f)
+
+**The DC-1 will automatically restart**
+
+**DC-1 is a domain now, in order to complete the next steps, we will have to login using the proper domain context (mydomain.com\labuser will be our username - same passwoord)**
+![image](https://github.com/user-attachments/assets/47977908-e43e-45d6-9c2e-b3aa11fc22dc)
 
 #### **Create a Domain Admin User**
 1. Open Active Directory Users and Computers (ADUC).
@@ -136,30 +149,38 @@ This tutorial outlines the implementation of on-premises Active Directory within
 5. Add `jane_admin` to the `Domain Admins` security group.
 6. Log out and log back in as `mydomain.com\jane_admin`.
 
-<p>
-<img src="https://i.imgur.com/Jq4eZPI.png" height="80%" width="80%" alt="Lab 5"/>
-</p>
+![image](https://github.com/user-attachments/assets/d359f4d6-5ddd-4b25-831e-3ef21b36182a)
 
-<p>
-<img src="https://i.imgur.com/fjfBu5v.png" height="80%" width="80%" alt="Lab 5"/>
-</p>
+![image](https://github.com/user-attachments/assets/e716ad23-8d7e-4423-adaf-ea4a5dd0de63)
 
-<p>
-<img src="https://i.imgur.com/OTBl5tT.png" height="80%" width="80%" alt="Lab 5"/>
-</p>
+![image](https://github.com/user-attachments/assets/a9965f35-3095-4026-8d91-955d7459ff52)
+
+![image](https://github.com/user-attachments/assets/403eae7c-dc03-4194-9c3d-0a860e56a933)
+
+![image](https://github.com/user-attachments/assets/a0a2f956-645a-4eb9-8334-507dd3227521)
+
+![image](https://github.com/user-attachments/assets/4f782da8-8ab8-4caa-bb05-92d07a32528e)
+
+![image](https://github.com/user-attachments/assets/f6d514d1-bd9f-4f3b-be1a-a90f094ad339)
 
 #### **Join Client-1 to the Domain**
 1. Log in as the local admin and join `Client-1` to the domain.
 2. Create a new OU titled '_CLIENTS' & add `Client-1` in ADUC to `_CLIENTS`.
 
-<p>
-<img src="https://i.imgur.com/2xHyKvs.png" height="80%" width="80%" alt="Lab 5"/>
-</p>
+**Log into DC-1 as Jane the Admin**
+![image](https://github.com/user-attachments/assets/7b4db476-afd5-402d-83cc-b776ac2d0d50)
 
-<p>
-<img src="https://i.imgur.com/kcyfdIP.png" height="80%" width="80%" alt="Lab 5"/>
-</p>
+**Navigate to the system window by right clicking the windows button**
+![image](https://github.com/user-attachments/assets/75f2c0f9-a133-4f3c-be28-ce8e0f4dc3bc)
 
+**Join Client-1 to the domain by using the 'rename this pc' tool**
+![image](https://github.com/user-attachments/assets/bf3118ec-0f69-477f-8cfd-1d610fdac29d)
+
+**Verify that Client-1 has joined the domain**
+![image](https://github.com/user-attachments/assets/901e07d2-e124-4af7-8c47-2dd537a2176d)
+
+**Create a new folder named '_CLIENTS' and drag/drop the Client-1 computer into it**
+![image](https://github.com/user-attachments/assets/92260c70-0a04-4a6a-be54-c2c3fa3719d4)
 ---
 
 ### Part 3: Creating Users with PowerShell

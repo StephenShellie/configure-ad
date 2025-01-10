@@ -186,13 +186,13 @@ This tutorial outlines the implementation of on-premises Active Directory within
 ### Part 3: Creating Users with PowerShell
 
 #### **Setup Remote Desktop for Domain Users**
-1. Log into `Client-1` as `mydomain.com\jane_admin`.
+1. Log into `Client-1` as `mydomain\jane_admin`.
 2. Open System Properties and enable Remote Desktop.
 3. Allow "domain users" access to Remote Desktop.
 
-<p>
-<img src="https://i.imgur.com/hK9sB8R.png" height="80%" width="80%" alt="Lab 5"/>
-</p>
+![image](https://github.com/user-attachments/assets/a4f56223-7b7b-4528-aa98-3d89c01f426c)
+
+![image](https://github.com/user-attachments/assets/74d7cafa-10be-4032-acbb-e4133fa03843)
 
 #### **Create Users with PowerShell**
 1. Log in to `DC-1` as `jane_admin`.
@@ -201,17 +201,18 @@ This tutorial outlines the implementation of on-premises Active Directory within
 4. Verify users appear in the `_EMPLOYEES` OU in ADUC.
 5. Attempt to log into `Client-1` with one of the created accounts.
 
-<p>
-<img src="https://i.imgur.com/RAgS5GM.png" height="80%" width="80%" alt="Lab 5"/>
-</p>
+![image](https://github.com/user-attachments/assets/0e7179ae-7591-4ccc-8230-56810a748306)
 
-<p>
-<img src="https://i.imgur.com/Qe1OaOn.png" height="80%" width="80%" alt="Lab 5"/>
-</p>
+**Create a new file**
+![image](https://github.com/user-attachments/assets/b7836c22-49a0-4bb7-9437-330b497c57d4)
 
-<p>
-<img src="https://i.imgur.com/iXBrDci.png" height="80%" width="80%" alt="Lab 5"/>
-</p>
+![image](https://github.com/user-attachments/assets/40458e9b-fdf1-4d0b-b402-053268ffaaac)
+
+![image](https://github.com/user-attachments/assets/a85410d6-128e-4594-bb8a-76eb739f5911)
+
+![image](https://github.com/user-attachments/assets/e46183bc-4bbe-4f5b-ba4a-6b8c667caa1d)
+
+![image](https://github.com/user-attachments/assets/89715764-a310-410a-83d3-203b356a18dc)
 
 ---
 

@@ -229,44 +229,79 @@ This tutorial outlines the implementation of on-premises Active Directory within
 4. Attempt to log in with a user account using incorrect passwords. Observe the account lockout behavior.
 5. Unlock the account in ADUC and reset the password.
 
-<p>
-<img src="https://i.imgur.com/4xZVZxJ.png" height="80%" width="80%" alt="Lab 5"/>
-</p>
+**Type gpmc.msc into the start window**
+![image](https://github.com/user-attachments/assets/4f8ef906-28f8-430b-ad07-00be92309c5c)
 
-<p>
-<img src="https://i.imgur.com/KW95ZOG.png" height="80%" width="80%" alt="Lab 5"/>
-</p>
+**Right click and edit the default domain policy**
+![image](https://github.com/user-attachments/assets/bc971eaa-5d71-49b4-962f-3e02d54bc773)
 
-<p>
-<img src="https://i.imgur.com/uWoFU61.png" height="80%" width="80%" alt="Lab 5"/>
-</p>
+**Navigate to the account lockout policy**
+![image](https://github.com/user-attachments/assets/0b207fec-5f9f-46a7-8510-9ad290a09ca4)
+
+**Adjust the lockout policy**
+![image](https://github.com/user-attachments/assets/a77e306d-41da-4810-957f-638a0f3a72ba)
+
+**You can either wait for the policy to auto update (~90 minutes) or log into Client 1 as Jane and force the policy update**
+![image](https://github.com/user-attachments/assets/0eeaad85-26ff-46e0-b9d0-f6d0ffac212f)
+
+**Attempt to login with the incorrect password**
+![image](https://github.com/user-attachments/assets/468cd96e-b4b8-469c-bdac-fbd7bf2e7afe)
+
+**Back on DC-1 Open 'Active Directory Users and Computers' and search for the locked out user**
+![image](https://github.com/user-attachments/assets/84a6385c-4e36-417e-88fc-d861671c23db)
+
+**Find the user account and unlock it**
+![image](https://github.com/user-attachments/assets/458152f1-4f56-4bb8-9005-8602af2e0037)
+
+**You can also reset the password + unlock the account by right clicking on the user name**
+![image](https://github.com/user-attachments/assets/9dffa52e-7b1d-4340-8c33-12ad1134662f)
+
+**Verify that the account has been unlocked by logging into Client-1 using the correct password**
+![image](https://github.com/user-attachments/assets/8e654e84-2282-4452-bac6-ff484f070002)
+
 
 #### **Enable and Disable Accounts**
 1. Disable a user account in ADUC.
 2. Attempt to log in with the disabled account and observe the error message.
 3. Re-enable the account and log in successfully.
 
-<p>
-<img src="https://i.imgur.com/CUUcX8S.png" height="80%" width="80%" alt="Lab 5"/>
-</p>
+**Right click and disable the account**
+![image](https://github.com/user-attachments/assets/39b6d588-38dc-40fc-a62a-abf84d321ff3)
 
-<p>
-<img src="https://i.imgur.com/TkMtlW1.png" height="80%" width="80%" alt="Lab 5"/>
-</p>
+![image](https://github.com/user-attachments/assets/fdbb0924-209e-4305-b59c-baa56387ede5)
 
-<p>
-<img src="https://i.imgur.com/KWKL3VZ.png" height="80%" width="80%" alt="Lab 5"/>
-</p>
+**Attempt to login**
+![image](https://github.com/user-attachments/assets/03685933-b85d-4968-ad40-61adce654949)
+
+**Re-enable the account from DC-1**
+![image](https://github.com/user-attachments/assets/368a7aef-8a8d-4cad-988f-77cce58d8db3)
+
+**You should be able to log into Client-1 using the re-enabled account**
+![image](https://github.com/user-attachments/assets/fd446336-cb9b-4ab8-83eb-ed98ce8a1dc5)
 
 #### **Observing Logs**
 1. Review authentication and account-related logs in Event Viewer:
    - Log on `DC-1` for domain-level events (shown below).
    - Log on `Client-1` for local events.
 
-<p>
-<img src="https://i.imgur.com/YwM0mgQ.png" height="80%" width="80%" alt="Lab 5"/>
-</p>
+**Open eventvwr.msc using the start menu in DC-1**
+![image](https://github.com/user-attachments/assets/396d4cb8-bade-43c2-b661-7bda594d9f69)
 
+**Navigate to the Security window and find the activity for the test account**
+![image](https://github.com/user-attachments/assets/4b6297d9-57ef-47e0-86ee-21801872d762)
+
+![image](https://github.com/user-attachments/assets/857ea6cc-8252-4ef8-8551-4b8863fbc70d)
+
+**Open Event Viewer using Client-1 and view the audit failures**
+![image](https://github.com/user-attachments/assets/5822d9bd-2aea-42d4-9717-7aff9062ab76)
+
+**If you are using a non-admin account, you won't be able to see the security events**
+![image](https://github.com/user-attachments/assets/0b78c121-4288-4df0-a579-9b1666a3b039)
+
+**You can either log off Client 1 and login using an admin account or run the Event Viewer as an admin and enter admin credentials**
+![image](https://github.com/user-attachments/assets/ffb5ea3f-ed87-4e57-9d89-8d8002631984)
+
+![image](https://github.com/user-attachments/assets/6ae57c3c-269a-44f5-b8a3-5772670cc75f)
 ---
 
 ### Completion

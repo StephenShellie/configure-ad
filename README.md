@@ -168,7 +168,11 @@ This tutorial outlines the implementation of on-premises Active Directory within
 2. Create a new OU titled '_CLIENTS' & add `Client-1` in ADUC to `_CLIENTS`.
 
 **Log into DC-1 as Jane the Admin**
+- We will use DC-1 in a bit
 ![image](https://github.com/user-attachments/assets/7b4db476-afd5-402d-83cc-b776ac2d0d50)
+
+**Log into client-1 as labuser**
+![image](https://github.com/user-attachments/assets/fb003105-da70-4041-9ea4-06a086c59c92)
 
 **Navigate to the system window by right clicking the windows button**
 ![image](https://github.com/user-attachments/assets/75f2c0f9-a133-4f3c-be28-ce8e0f4dc3bc)

@@ -172,6 +172,7 @@ This tutorial outlines the implementation of on-premises Active Directory within
 ![image](https://github.com/user-attachments/assets/7b4db476-afd5-402d-83cc-b776ac2d0d50)
 
 **Log into client-1 as labuser**
+
 ![image](https://github.com/user-attachments/assets/fb003105-da70-4041-9ea4-06a086c59c92)
 
 **Navigate to the system window by right clicking the windows button**

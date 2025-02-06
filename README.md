@@ -96,6 +96,14 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 ![image](https://github.com/user-attachments/assets/2529f31c-52e8-42e7-96cb-24db754a3a17)
 
+- You can also change the DNS settings from within the client- computer
+
+![image](https://github.com/user-attachments/assets/16ccd901-c0f0-4422-afb3-1d2620a35aff)
+
+![image](https://github.com/user-attachments/assets/cf1f917f-6b33-4d5c-80ca-08446812da9b)
+
+![image](https://github.com/user-attachments/assets/8c22b181-775d-438a-80dc-3c1570427451)
+
 4. **Test Connectivity**:
    - Restart `Client-1` from the Azure Portal.
    - Log into `Client-1` and use the `ping` command to test connectivity with `DC-1`.

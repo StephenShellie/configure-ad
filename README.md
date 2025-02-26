@@ -119,27 +119,27 @@ This tutorial outlines the implementation of on-premises Active Directory within
 3. Promote `DC-1` as a Domain Controller and set up a new forest (e.g., `mydomain.com`).
 4. Restart `DC-1` and log in as `mydomain.com\labuser`.
  
- **Open Server Manager then add roles and features** 
+- **Open Server Manager then add roles and features** 
 ![image](https://github.com/user-attachments/assets/e50809fe-5013-4863-bc93-accd49c2f3d7)
 
-**Add the features from the Active Directory Domain Services**
+- **Add the features from the Active Directory Domain Services**
 ![image](https://github.com/user-attachments/assets/1a8ae232-4388-4e5c-8328-a10e21b1ca1e)
 
-**Open the noticiation window and select "promote this server to a domain controller"**
+- **Open the noticiation window and select "promote this server to a domain controller"**
 ![image](https://github.com/user-attachments/assets/ce7ab7dc-4a19-49a6-8f71-714efd22f4c9)
 
-**Add mydomain.com as a new forest**
+- **Add mydomain.com as a new forest**
 ![image](https://github.com/user-attachments/assets/7e03dd2f-6633-4945-b12b-fc297a6359b4)
 
-**Deselect "Create DNS delegation**
+- **Deselect "Create DNS delegation**
 ![image](https://github.com/user-attachments/assets/b7ce680a-dfb0-4c8e-be5e-0e64b85ab119)
 
-**Finish the setup wizard and install**
+- **Finish the setup wizard and install**
 ![image](https://github.com/user-attachments/assets/f326b790-90b8-4cd6-9ad3-94211488806f)
 
-**The DC-1 will automatically restart**
+- **The DC-1 will automatically restart**
 
-**DC-1 is a domain now, in order to complete the next steps, we will have to login using the proper domain context (mydomain.com\labuser will be our username - same passwoord)**
+- **DC-1 is a domain now, in order to complete the next steps, we will have to login using the proper domain context (mydomain.com\labuser will be our username - same passwoord)**
 ![image](https://github.com/user-attachments/assets/47977908-e43e-45d6-9c2e-b3aa11fc22dc)
 
 #### **Create a Domain Admin User**
@@ -293,21 +293,21 @@ This tutorial outlines the implementation of on-premises Active Directory within
    - Log on `DC-1` for domain-level events (shown below).
    - Log on `Client-1` for local events.
 
-**Open eventvwr.msc using the start menu in DC-1**
+- **Open eventvwr.msc using the start menu in DC-1**
 ![image](https://github.com/user-attachments/assets/396d4cb8-bade-43c2-b661-7bda594d9f69)
 
-**Navigate to the Security window and find the activity for the test account**
+- **Navigate to the Security window and find the activity for the test account**
 ![image](https://github.com/user-attachments/assets/4b6297d9-57ef-47e0-86ee-21801872d762)
 
 ![image](https://github.com/user-attachments/assets/857ea6cc-8252-4ef8-8551-4b8863fbc70d)
 
-**Open Event Viewer using Client-1 and view the audit failures**
+- **Open Event Viewer using Client-1 and view the audit failures**
 ![image](https://github.com/user-attachments/assets/5822d9bd-2aea-42d4-9717-7aff9062ab76)
 
-**If you are using a non-admin account, you won't be able to see the security events**
+- **If you are using a non-admin account, you won't be able to see the security events**
 ![image](https://github.com/user-attachments/assets/0b78c121-4288-4df0-a579-9b1666a3b039)
 
-**You can either log off Client 1 and login using an admin account or run the Event Viewer as an admin and enter admin credentials**
+- **You can either log off Client 1 and login using an admin account or run the Event Viewer as an admin and enter admin credentials**
 ![image](https://github.com/user-attachments/assets/ffb5ea3f-ed87-4e57-9d89-8d8002631984)
 
 ![image](https://github.com/user-attachments/assets/6ae57c3c-269a-44f5-b8a3-5772670cc75f)

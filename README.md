@@ -5,10 +5,6 @@
 <h1>On-premises Active Directory Deployed in the Cloud (Azure)</h1>
 This tutorial outlines the implementation of on-premises Active Directory within Azure Virtual Machines.<br />
 
-<h2>Video Demonstration</h2>
-
-- ### [YouTube: How to Deploy on-premises Active Directory within Azure Compute](https://www.youtube.com)
-
 <h2>Environments and Technologies Used</h2>
 
 - Microsoft Azure (Virtual Machines/Compute)
@@ -183,13 +179,13 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 ![image](https://github.com/user-attachments/assets/fb003105-da70-4041-9ea4-06a086c59c92)
 
-**Navigate to the system window by right clicking the windows button**
+- **Navigate to the system window by right clicking the windows button**
 ![image](https://github.com/user-attachments/assets/75f2c0f9-a133-4f3c-be28-ce8e0f4dc3bc)
 
-**Join Client-1 to the domain by using the 'rename this pc' tool**
+- **Join Client-1 to the domain by using the 'rename this pc' tool**
 ![image](https://github.com/user-attachments/assets/bf3118ec-0f69-477f-8cfd-1d610fdac29d)
 
-**Verify that Client-1 has joined the domain**
+- **Verify that Client-1 has joined the domain**
 ![image](https://github.com/user-attachments/assets/901e07d2-e124-4af7-8c47-2dd537a2176d)
 
 **Create a new folder named '_CLIENTS' and drag/drop the Client-1 computer into it**
@@ -216,16 +212,16 @@ This tutorial outlines the implementation of on-premises Active Directory within
 
 ![image](https://github.com/user-attachments/assets/0e7179ae-7591-4ccc-8230-56810a748306)
 
-**Create a new file**
+- **Create a new file**
 ![image](https://github.com/user-attachments/assets/b7836c22-49a0-4bb7-9437-330b497c57d4)
 
-**Copy/Paste scripts & run it**
+- **Copy/Paste scripts & run it**
 ![image](https://github.com/user-attachments/assets/40458e9b-fdf1-4d0b-b402-053268ffaaac)
 
-**Verify users**
+- **Verify users**
 ![image](https://github.com/user-attachments/assets/a85410d6-128e-4594-bb8a-76eb739f5911)
 
-**Log into Client 1 using one of the created accounts**
+- **Log into Client 1 using one of the created accounts**
 ![image](https://github.com/user-attachments/assets/e46183bc-4bbe-4f5b-ba4a-6b8c667caa1d)
 
 ![image](https://github.com/user-attachments/assets/89715764-a310-410a-83d3-203b356a18dc)
@@ -242,34 +238,34 @@ This tutorial outlines the implementation of on-premises Active Directory within
 4. Attempt to log in with a user account using incorrect passwords. Observe the account lockout behavior.
 5. Unlock the account in ADUC and reset the password.
 
-**Type gpmc.msc into the start window**
+- **Type gpmc.msc into the start window**
 ![image](https://github.com/user-attachments/assets/4f8ef906-28f8-430b-ad07-00be92309c5c)
 
-**Right click and edit the default domain policy**
+- **Right click and edit the default domain policy**
 ![image](https://github.com/user-attachments/assets/bc971eaa-5d71-49b4-962f-3e02d54bc773)
 
-**Navigate to the account lockout policy**
+- **Navigate to the account lockout policy**
 ![image](https://github.com/user-attachments/assets/0b207fec-5f9f-46a7-8510-9ad290a09ca4)
 
-**Adjust the lockout policy**
+- **Adjust the lockout policy**
 ![image](https://github.com/user-attachments/assets/a77e306d-41da-4810-957f-638a0f3a72ba)
 
-**You can either wait for the policy to auto update (~90 minutes) or log into Client 1 as Jane and force the policy update**
+- **You can either wait for the policy to auto update (~90 minutes) or log into Client 1 as Jane and force the policy update**
 ![image](https://github.com/user-attachments/assets/0eeaad85-26ff-46e0-b9d0-f6d0ffac212f)
 
-**Attempt to login with the incorrect password**
+- **Attempt to login with the incorrect password**
 ![image](https://github.com/user-attachments/assets/468cd96e-b4b8-469c-bdac-fbd7bf2e7afe)
 
-**Back on DC-1 Open 'Active Directory Users and Computers' and search for the locked out user**
+- **Back on DC-1 Open 'Active Directory Users and Computers' and search for the locked out user**
 ![image](https://github.com/user-attachments/assets/84a6385c-4e36-417e-88fc-d861671c23db)
 
-**Find the user account and unlock it**
+- **Find the user account and unlock it**
 ![image](https://github.com/user-attachments/assets/458152f1-4f56-4bb8-9005-8602af2e0037)
 
-**You can also reset the password + unlock the account by right clicking on the user name**
+- **You can also reset the password + unlock the account by right clicking on the user name**
 ![image](https://github.com/user-attachments/assets/9dffa52e-7b1d-4340-8c33-12ad1134662f)
 
-**Verify that the account has been unlocked by logging into Client-1 using the correct password**
+- **Verify that the account has been unlocked by logging into Client-1 using the correct password**
 ![image](https://github.com/user-attachments/assets/8e654e84-2282-4452-bac6-ff484f070002)
 
 
@@ -278,18 +274,18 @@ This tutorial outlines the implementation of on-premises Active Directory within
 2. Attempt to log in with the disabled account and observe the error message.
 3. Re-enable the account and log in successfully.
 
-**Right click and disable the account**
+- **Right click and disable the account**
 ![image](https://github.com/user-attachments/assets/39b6d588-38dc-40fc-a62a-abf84d321ff3)
 
 ![image](https://github.com/user-attachments/assets/fdbb0924-209e-4305-b59c-baa56387ede5)
 
-**Attempt to login**
+- **Attempt to login**
 ![image](https://github.com/user-attachments/assets/03685933-b85d-4968-ad40-61adce654949)
 
-**Re-enable the account from DC-1**
+- **Re-enable the account from DC-1**
 ![image](https://github.com/user-attachments/assets/368a7aef-8a8d-4cad-988f-77cce58d8db3)
 
-**You should be able to log into Client-1 using the re-enabled account**
+- **You should be able to log into Client-1 using the re-enabled account**
 ![image](https://github.com/user-attachments/assets/fd446336-cb9b-4ab8-83eb-ed98ce8a1dc5)
 
 #### **Observing Logs**
